@@ -1,11 +1,6 @@
 name: MusicBoard update compatibility
 on:
-  push:
-    branches: [main]
-    paths: ['scripts/sync.py', '.github/workflows/sync.yml']
   workflow_dispatch:
-  schedule:
-    - cron: '17,47 * * * *'
 permissions:
   contents: write
 concurrency:
