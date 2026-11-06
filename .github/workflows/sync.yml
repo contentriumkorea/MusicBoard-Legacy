@@ -1,4 +1,4 @@
-name: MusicBoard update compatibility
+name: MusicBoard legacy files
 on:
   workflow_dispatch:
 permissions:
