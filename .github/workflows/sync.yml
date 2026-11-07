@@ -1,4 +1,4 @@
-name: MusicBoard legacy files
+name: MusicBoard
 on:
   workflow_dispatch:
 permissions:
