@@ -8,7 +8,7 @@ import subprocess
 import tempfile
 
 SOURCE = 'contentriumkorea/MusicBoard'
-TARGET = 'contentriumkorea/MusicBoard-Legacy'
+TARGET = 'contentriumkorea/SONO'
 
 def gh(*args, check=True):
     return subprocess.run(['gh', *args], check=check, capture_output=True, text=True)
@@ -41,7 +41,7 @@ def manifest(release):
 
 def main():
     if os.environ.get('GITHUB_REPOSITORY') != TARGET:
-        raise ValueError('This workflow belongs only to the MusicBoard-Legacy repository')
+        raise ValueError('This workflow belongs only to the SONO repository')
     release = json.loads(gh('api', f'repos/{SOURCE}/releases/latest').stdout)
     tag, assets = manifest(release)
     current = gh('api', f'repos/{TARGET}/releases/tags/{tag}', check=False)
